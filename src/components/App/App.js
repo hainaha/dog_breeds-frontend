@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import api from '../../utils/TheDogApi';
 import Header from '../Header/Header';
+import MainImage from '../MainImage/MainImage';
+import Description from '../Description/Description';
+import Footer from '../Footer/Footer';
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -24,12 +27,15 @@ function App() {
     <div className='App'>
       <div className='App'>
         <Header />
+        <MainImage />
+        <Description />
+
         {/* <div className=''></div>
         <Routes>
           <Route path='/' element={<About />} />
           <Route path='/main' element={<Main />} />
-        </Routes>
-        <Footer /> */}
+        </Routes> */}
+        <Footer />
       </div>
     </div>
   );

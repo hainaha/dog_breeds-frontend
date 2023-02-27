@@ -1,0 +1,47 @@
+.description__container {
+  max-width: 880px;
+  margin: 0 auto;
+}
+.description__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  margin: 1em;
+  text-align: center;
+}
+
+.description__button {
+  background-color: #b49e72;
+  border: none;
+  color: #ffffff;
+  border-radius: 100px;
+  padding: 1em 3em;
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.description__button:hover,
+.description__button:focus {
+  border: 2px solid #c5b391;
+  background-color: #c5b391;
+  color: #000000;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+  .description__button {
+    font-size: 18px;
+    margin-top: 36px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .description__text {
+    font-size: 18px;
+    line-height: 1.21;
+    margin: 16px 0 0;
+    text-align: justify;
+  }
+}
