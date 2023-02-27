@@ -7,7 +7,7 @@ function MainImage() {
       <img
         src={image}
         className='main-image'
-        alt='An image of a dog sitting next to a woman looking at the horizon'
+        alt='Dog sitting next to a woman looking at the horizon'
       />
     </>
   );

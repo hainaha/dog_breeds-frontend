@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import api from '../../utils/TheDogApi';
 import Header from '../Header/Header';
 import MainImage from '../MainImage/MainImage';
 import Description from '../Description/Description';
 import Footer from '../Footer/Footer';
+import Navigation from '../Navigation/Navigation';
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -27,6 +29,7 @@ function App() {
     <div className='App'>
       <div className='App'>
         <Header />
+        <Navigation />
         <MainImage />
         <Description />
 

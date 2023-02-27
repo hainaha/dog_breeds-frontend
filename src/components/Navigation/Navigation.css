@@ -1,0 +1,34 @@
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.navigation__link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  padding: 0 0.5em 0.5em;
+  color: #000000;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+  .navigation__link {
+    font-size: 18px;
+    line-height: 1.21;
+    padding: 0 0 0.5em 1em;
+  }
+}
+
+.navigation__link:hover,
+.navigation__link:focus {
+  font-weight: 900;
+}
+
+.active {
+  font-weight: 900;
+  color: #b49e72;
+  text-decoration: underline;
+}

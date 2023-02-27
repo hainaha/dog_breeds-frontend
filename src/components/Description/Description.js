@@ -9,16 +9,10 @@ function Description() {
           images and their temperament.
         </p>
         <p className='description__text'>
-          I find the diversity of dog breeds to be nothing short of fascinating.
-          From the tiny Chihuahua to the massive Great Dane, the range of sizes,
-          shapes, and coat colors is simply incredible. Each breed has its own
-          unique set of characteristics, and I love to learn about them all.
-        </p>
-        <p className='description__text'>
-          Dogs are truly a person's best friend, and I'm proud to call myself a
-          dog lover. I'm sure that anyone who has ever owned a pup would agree
-          that the unconditional love and companionship that a dog provides is
-          more than worth the effort of taking care of them.
+          The diversity of dog breeds is fascinating, each breed has its own
+          unique set of characteristics. From the tiny Chihuahua to the massive
+          Great Dane, the range of sizes, shapes, and coat colors is simply
+          incredible.
         </p>
         <p className='description__text'>
           No matter what breed you choose, you can be sure that you will have a
