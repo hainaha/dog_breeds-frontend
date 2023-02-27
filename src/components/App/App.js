@@ -7,6 +7,7 @@ import MainImage from '../MainImage/MainImage';
 import Description from '../Description/Description';
 import Footer from '../Footer/Footer';
 import Navigation from '../Navigation/Navigation';
+import About from '../About/About';
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -32,7 +33,7 @@ function App() {
         <Navigation />
         <MainImage />
         <Description />
-
+        <About />
         {/* <div className=''></div>
         <Routes>
           <Route path='/' element={<About />} />
