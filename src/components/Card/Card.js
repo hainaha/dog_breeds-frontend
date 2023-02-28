@@ -18,9 +18,9 @@ function Card(props) {
 
   // const cardLikesClassName = `card__likes ${isLiked && 'card__likes_active'}`;
 
-  // function handleClick() {
-  //   props.onCardClick(props.card);
-  // }
+  function handleClick() {
+    props.onCardClick(props.card);
+  }
 
   // function handleLikeClick() {
   //   props.onCardLike(props.card);
@@ -42,6 +42,7 @@ function Card(props) {
           src={props.card.url}
           className='card__image'
           alt={props.card.breeds[0].name}
+          onClick={handleClick}
         />
         <div className='card__title-container'>
           <h2 className='card__title'>{props.card.breeds[0].name}</h2>

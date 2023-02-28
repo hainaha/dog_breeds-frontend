@@ -10,11 +10,24 @@ import Navigation from '../Navigation/Navigation';
 import About from '../About/About';
 import Preloader from '../Preloader/Preloader';
 import Main from '../Main/Main';
+import ImagePopup from '../ImagePopup/ImagePopup';
 
 function App() {
   const [cards, setCards] = useState([]);
   const [breeds, setBreeds] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [isImagePopupOpen, setIsImagePopupOpen] = useState(false);
+  const [selectedCard, setSelectedCard] = useState({});
+
+  function handleCardClick(card) {
+    setSelectedCard(card);
+    setIsImagePopupOpen(true);
+    console.log(card);
+  }
+
+  function closeImagePopup() {
+    setIsImagePopupOpen(false);
+  }
 
   useEffect(() => {
     api
@@ -31,18 +44,23 @@ function App() {
       console.log(xxx.url);
     });
   }, []);
+
   // console.log(cards);
   // console.log(breeds);
-  breeds.forEach((breed) => {
-    console.log(breed);
-  });
+  // breeds.forEach((breed) => {
+  //   console.log(breed);
+  // });
 
   return (
     <div className='App'>
       <div className='App'>
         <Header />
         <Navigation />
-        <Main cards={cards} isLoading={isLoading} />
+        <Main
+          cards={cards}
+          isLoading={isLoading}
+          onCardClick={handleCardClick}
+        />
         {/* <Preloader /> */}
         {/* <MainImage />
         <Description />
@@ -52,6 +70,11 @@ function App() {
           <Route path='/' element={<About />} />
           <Route path='/main' element={<Main />} />
         </Routes> */}
+        <ImagePopup
+          card={selectedCard}
+          isOpen={isImagePopupOpen}
+          onClose={closeImagePopup}
+        />
         <Footer />
       </div>
     </div>
