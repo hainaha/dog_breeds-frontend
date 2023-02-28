@@ -6,11 +6,11 @@ function ImagePopup(props) {
       <div className={`popup ` + (props.isOpen ? 'popup_opened' : '')}>
         <div className='popup__container'>
           <img
-            src={props.card.url}
-            alt={'ALT'}
+            src={props.imgSrc}
+            alt={props.imgName}
             className='popup__expanded-image'
           />
-          <p className='popup__info'>{props.card.url}</p>
+          <p className='popup__text'>{props.imgName}</p>
           <button
             className='popup__close'
             type='button'
