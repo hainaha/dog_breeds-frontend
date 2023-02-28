@@ -1,3 +1,7 @@
+.about__container {
+  padding-top: 20px;
+}
+
 .about__title {
   font-size: 18px;
   font-weight: 500;
@@ -31,6 +35,7 @@
 .about__link {
   color: #000000;
   text-decoration: none;
+  font-size: 14px;
 }
 
 .about__icon {
@@ -56,6 +61,7 @@
   }
   .about__title {
     text-align: left;
+    font-size: 22px;
   }
 
   .about__text {
@@ -67,10 +73,11 @@
   .about__image-container {
     height: 240px;
     width: 240px;
-    flex-basis: 80%;
+    flex-basis: 100%;
   }
 
   .about__link {
     padding-left: 1em;
+    font-size: 18px;
   }
 }

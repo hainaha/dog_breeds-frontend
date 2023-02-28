@@ -8,14 +8,22 @@ import Description from '../Description/Description';
 import Footer from '../Footer/Footer';
 import Navigation from '../Navigation/Navigation';
 import About from '../About/About';
+import Preloader from '../Preloader/Preloader';
+import Main from '../Main/Main';
 
 function App() {
   const [cards, setCards] = useState([]);
   const [breeds, setBreeds] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
   useEffect(() => {
-    api.getInitialCards().then((initialCards) => {
-      setCards(initialCards);
-    });
+    api
+      .getInitialCards()
+      .then(setIsLoading(true))
+      .then((initialCards) => {
+        setCards(initialCards);
+        setIsLoading(false);
+      });
     api.getBreeds().then((allBreeds) => {
       setBreeds(allBreeds);
     });
@@ -23,17 +31,22 @@ function App() {
       console.log(xxx.url);
     });
   }, []);
-  console.log(cards);
-  console.log(breeds);
+  // console.log(cards);
+  // console.log(breeds);
+  breeds.forEach((breed) => {
+    console.log(breed);
+  });
 
   return (
     <div className='App'>
       <div className='App'>
         <Header />
         <Navigation />
-        <MainImage />
+        <Main cards={cards} isLoading={isLoading} />
+        {/* <Preloader /> */}
+        {/* <MainImage />
         <Description />
-        <About />
+        <About /> */}
         {/* <div className=''></div>
         <Routes>
           <Route path='/' element={<About />} />
