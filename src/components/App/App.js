@@ -16,11 +16,16 @@ function App() {
   const [cards, setCards] = useState([]);
   const [breeds, setBreeds] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [cardsToShow, setCardsToShow] = useState(3);
   const navigate = useNavigate();
 
   const breedsPage = () => {
     navigate('/breeds');
   };
+
+  function handleShowMoreCards() {
+    setCardsToShow(cardsToShow + 3);
+  }
 
   // const [isImagePopupOpen, setIsImagePopupOpen] = useState(false);
   // const [selectedCard, setSelectedCard] = useState({});
@@ -85,7 +90,13 @@ function App() {
           <Route
             path='/breeds'
             element={
-              <Main cards={cards} isLoading={isLoading} breeds={breeds} />
+              <Main
+                cards={cards}
+                isLoading={isLoading}
+                breeds={breeds}
+                showMoreCards={handleShowMoreCards}
+                cardsToShow={cardsToShow}
+              />
             }
           />
           <Route path='/about' element={<About />} />

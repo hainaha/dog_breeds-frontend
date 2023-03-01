@@ -63,7 +63,7 @@ function Main(props) {
             ))}
           </select>
           <button className='main__button' onClick={showSelectedBreed}>
-            See More
+            Search
           </button>
           <img
             src={selectedBreedImage}
@@ -79,11 +79,18 @@ function Main(props) {
         </div>
         {props.isLoading ? <Preloader /> : ''}
         <section className='main__content'>
-          {props.cards.map((card) => (
+          {props.cards.slice(0, props.cardsToShow).map((card) => (
             <>
               <Card card={card} key={card.id} onCardClick={props.onCardClick} />
             </>
           ))}
+          {props.cardsToShow >= props.cards.length ? (
+            ''
+          ) : (
+            <button className='main__button' onClick={props.showMoreCards}>
+              Show More
+            </button>
+          )}
         </section>
       </main>
     </>
