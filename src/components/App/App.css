@@ -1,9 +1,14 @@
-.App {
+.page {
   margin: 0 auto;
   background-color: #eee9e0;
+  position: relative;
   min-height: 100vh;
   font-family: 'Inter', Arial, Helvetica, sans-serif;
   text-align: center;
+}
+
+.page__content {
+  padding-bottom: 64px;
 }
 
 /* .App {

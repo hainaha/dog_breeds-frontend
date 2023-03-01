@@ -52,15 +52,15 @@ function App() {
   // });
 
   return (
-    <div className='App'>
-      <div className='App'>
+    <div className='page'>
+      <div className='page__content'>
         <Header />
         <Navigation />
         <Main cards={cards} isLoading={isLoading} />
         {/* <Preloader /> */}
         {/* <MainImage />
-        <Description />
-        <About /> */}
+        <Description /> */}
+        {/* <About /> */}
         {/* <div className=''></div>
         <Routes>
           <Route path='/' element={<About />} />
@@ -71,8 +71,8 @@ function App() {
           isOpen={isImagePopupOpen}
           onClose={closeImagePopup}
         /> */}
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 
