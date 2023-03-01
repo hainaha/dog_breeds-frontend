@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import './App.css';
 import api from '../../utils/TheDogApi';
 import Header from '../Header/Header';
-import MainImage from '../MainImage/MainImage';
-import Description from '../Description/Description';
+import Home from '../Home/Home';
+// import Description from '../Description/Description';
 import Footer from '../Footer/Footer';
 import Navigation from '../Navigation/Navigation';
 import About from '../About/About';
@@ -16,6 +16,11 @@ function App() {
   const [cards, setCards] = useState([]);
   const [breeds, setBreeds] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const breedsPage = () => {
+    navigate('/breeds');
+  };
 
   // const [isImagePopupOpen, setIsImagePopupOpen] = useState(false);
   // const [selectedCard, setSelectedCard] = useState({});
@@ -26,8 +31,8 @@ function App() {
   //   console.log(card);
   // }
 
-  // function closeImagePopup() {
-  //   setIsImagePopupOpen(false);
+  // function goToBreeds() {
+  //   <Link to='/breeds'></Link>;
   // }
 
   useEffect(() => {
@@ -66,21 +71,24 @@ function App() {
       <div className='page__content'>
         <Header />
         <Navigation />
-        <Main cards={cards} isLoading={isLoading} breeds={breeds} />
-        {/* <Preloader /> */}
-        {/* <MainImage />
+        <Routes>
+          <Route path='/' element={<Home breedsPage={breedsPage} />} />
+          <Route
+            path='/breeds'
+            element={
+              <Main cards={cards} isLoading={isLoading} breeds={breeds} />
+            }
+          />
+          <Route path='/about' element={<About />} />
+          {/* <MainImage />
         <Description /> */}
-        {/* <About /> */}
-        {/* <div className=''></div>
+          {/* <About /> */}
+          {/* <div className=''></div>
         <Routes>
           <Route path='/' element={<About />} />
           <Route path='/main' element={<Main />} />
         </Routes> */}
-        {/* <ImagePopup
-          card={selectedCard}
-          isOpen={isImagePopupOpen}
-          onClose={closeImagePopup}
-        /> */}
+        </Routes>
       </div>
       <Footer />
     </div>

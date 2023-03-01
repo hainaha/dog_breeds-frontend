@@ -1,8 +1,13 @@
-.description__container {
+.home__image {
+  max-width: 100%;
+  margin-top: 18px;
+}
+
+.home__container {
   max-width: 880px;
   margin: 0 auto;
 }
-.description__text {
+.home__text {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.14;
@@ -10,7 +15,7 @@
   text-align: center;
 }
 
-.description__button {
+.home__button {
   background-color: #b49e72;
   border: none;
   color: #ffffff;
@@ -22,8 +27,8 @@
   box-sizing: border-box;
 }
 
-.description__button:hover,
-.description__button:focus {
+.home__button:hover,
+.home__button:focus {
   border: 2px solid #c5b391;
   background-color: #c5b391;
   color: #000000;
@@ -31,14 +36,20 @@
 }
 
 @media screen and (min-width: 600px) {
-  .description__text {
+  .home__text {
     font-size: 18px;
     line-height: 1.21;
     text-align: justify;
   }
 
-  .description__button {
+  .home__button {
     font-size: 18px;
     margin-top: 36px;
+  }
+}
+
+@media screen and (min-width: 880px) {
+  .home__image {
+    max-width: 880px;
   }
 }

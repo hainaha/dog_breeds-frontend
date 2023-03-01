@@ -78,7 +78,7 @@ function Main(props) {
           </p>
         </div>
         {props.isLoading ? <Preloader /> : ''}
-        <section className='content'>
+        <section className='main__content'>
           {props.cards.map((card) => (
             <>
               <Card card={card} key={card.id} onCardClick={props.onCardClick} />

@@ -5,7 +5,7 @@ export default function Navigation() {
   return (
     <nav className='navigation'>
       <NavLink to='/' className='navigation__link'>
-        Main
+        Home
       </NavLink>
       <NavLink to='about' className='navigation__link'>
         About
