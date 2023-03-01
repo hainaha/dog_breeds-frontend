@@ -16,6 +16,7 @@ function App() {
   const [cards, setCards] = useState([]);
   const [breeds, setBreeds] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+
   // const [isImagePopupOpen, setIsImagePopupOpen] = useState(false);
   // const [selectedCard, setSelectedCard] = useState({});
 
@@ -51,12 +52,21 @@ function App() {
   //   console.log(breed);
   // });
 
+  // function filterBreedsWithImage(breeds) {
+  //   const result = breeds.filter(hasImage);
+
+  //   function hasImage(breed) {
+  //     return breed.image;
+  //   }
+  //   console.log(result);
+  // }
+
   return (
     <div className='page'>
       <div className='page__content'>
         <Header />
         <Navigation />
-        <Main cards={cards} isLoading={isLoading} />
+        <Main cards={cards} isLoading={isLoading} breeds={breeds} />
         {/* <Preloader /> */}
         {/* <MainImage />
         <Description /> */}

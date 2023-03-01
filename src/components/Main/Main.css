@@ -7,9 +7,78 @@
   padding-top: 20px;
 }
 
+.main__select-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.main__select-text {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.main__select-image {
+  display: block;
+  margin: 0 auto;
+  padding-top: 20px;
+  max-width: 100%;
+  max-height: 75vh;
+}
+
+.main__select {
+  padding: 10px;
+  border-radius: 100px;
+  margin-bottom: 15px;
+}
+
+.main__button {
+  background-color: #b49e72;
+  border: none;
+  color: #ffffff;
+  border-radius: 100px;
+  padding: 1em 3em;
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.main__button:hover,
+.main__button:focus {
+  border: 2px solid #c5b391;
+  background-color: #c5b391;
+  color: #000000;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 600px) {
   .content {
     margin: 50px auto 0;
     gap: 17px;
+  }
+
+  .main__select-title {
+    font-size: 22px;
+    padding-top: 40px;
+  }
+
+  .main__select {
+    padding: 18px;
+    margin-right: 18px;
+    margin-bottom: 0;
+  }
+
+  .main__button {
+    font-size: 18px;
+    margin-top: 18px;
+  }
+
+  .main__select-image {
+    padding-top: 36px;
+    max-width: 880px;
+  }
+
+  .main__select-text {
+    font-size: 18px;
   }
 }
