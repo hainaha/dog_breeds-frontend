@@ -24,6 +24,7 @@ function About() {
           <a
             href='https://github.com/hainaha'
             target='_blank'
+            rel='noreferrer'
             className='about__link'
           >
             <img src={githubIcon} className='about__icon' alt='GitHub Icon' />
