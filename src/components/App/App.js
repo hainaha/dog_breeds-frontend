@@ -4,13 +4,10 @@ import './App.css';
 import api from '../../utils/TheDogApi';
 import Header from '../Header/Header';
 import Home from '../Home/Home';
-// import Description from '../Description/Description';
 import Footer from '../Footer/Footer';
 import Navigation from '../Navigation/Navigation';
 import About from '../About/About';
-import Preloader from '../Preloader/Preloader';
 import Main from '../Main/Main';
-// import ImagePopup from '../ImagePopup/ImagePopup';
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -26,19 +23,6 @@ function App() {
   function handleShowMoreCards() {
     setCardsToShow(cardsToShow + 3);
   }
-
-  // const [isImagePopupOpen, setIsImagePopupOpen] = useState(false);
-  // const [selectedCard, setSelectedCard] = useState({});
-
-  // function handleCardClick(card) {
-  //   setSelectedCard(card);
-  //   setIsImagePopupOpen(true);
-  //   console.log(card);
-  // }
-
-  // function goToBreeds() {
-  //   <Link to='/breeds'></Link>;
-  // }
 
   useEffect(() => {
     api
@@ -65,21 +49,6 @@ function App() {
       });
   }, []);
 
-  // console.log(cards);
-  // console.log(breeds);
-  // breeds.forEach((breed) => {
-  //   console.log(breed);
-  // });
-
-  // function filterBreedsWithImage(breeds) {
-  //   const result = breeds.filter(hasImage);
-
-  //   function hasImage(breed) {
-  //     return breed.image;
-  //   }
-  //   console.log(result);
-  // }
-
   return (
     <div className='page'>
       <div className='page__content'>
@@ -100,38 +69,11 @@ function App() {
             }
           />
           <Route path='/about' element={<About />} />
-          {/* <MainImage />
-        <Description /> */}
-          {/* <About /> */}
-          {/* <div className=''></div>
-        <Routes>
-          <Route path='/' element={<About />} />
-          <Route path='/main' element={<Main />} />
-        </Routes> */}
         </Routes>
       </div>
       <Footer />
     </div>
   );
-
-  // return (
-  //   <div className='App'>
-  //     <header className='App-header'>
-  //       <img src={logo} className='App-logo' alt='logo' />
-  //       <p>
-  //         Edit <code>src/App.js</code> and save to reload.
-  //       </p>
-  //       <a
-  //         className='App-link'
-  //         href='https://reactjs.org'
-  //         target='_blank'
-  //         rel='noopener noreferrer'
-  //       >
-  //         Learn React
-  //       </a>
-  //     </header>
-  //   </div>
-  // );
 }
 
 export default App;

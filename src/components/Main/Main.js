@@ -1,33 +1,17 @@
-// import { useContext } from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Card from '../Card/Card';
 import './main.css';
 import Preloader from '../Preloader/Preloader';
 
-// import { CreateUserContext } from '../contexts/CurrentUserContext';
-
 function Main(props) {
-  // const currentUser = useContext(CreateUserContext);
   const [selectedBreed, setSelectedBreed] = useState('');
   const [selectedBreedName, setSelectedBreedName] = useState('');
   const [selectedBreedImage, setSelectedBreedImage] = useState('');
   const [selectedBreedTemperament, setSelectedBreedTemperament] = useState('');
-  // const [selectedBreedx, setSelectedBreedx] = useState({});
-
-  // function handleSelectBreed(evt) {
-  //   const breed = evt.target.value;
-  //   setSelectedBreedName(breed);
-  // }
 
   function handleSelectBreed(evt) {
     const selected = evt.target.value;
     setSelectedBreed(selected);
-    // let breed = props.breeds.find(function (breed) {
-    //   return breed.name === selectedBreed;
-    // });
-    // setSelectedBreedName(breed.name);
-    // setSelectedBreedImage(breed.image.url);
-    // setSelectedBreedTemperament(breed.temperament);
   }
 
   function showSelectedBreed() {

@@ -14,14 +14,6 @@
   text-decoration: none;
 }
 
-@media screen and (min-width: 600px) {
-  .navigation__link {
-    font-size: 18px;
-    line-height: 1.21;
-    padding: 0 0 0.5em 1em;
-  }
-}
-
 .navigation__link:hover,
 .navigation__link:focus {
   font-weight: 900;
@@ -31,4 +23,12 @@
   font-weight: 900;
   color: #b49e72;
   text-decoration: underline;
+}
+
+@media screen and (min-width: 600px) {
+  .navigation__link {
+    font-size: 18px;
+    line-height: 1.21;
+    padding: 0 0 0.5em 1em;
+  }
 }
