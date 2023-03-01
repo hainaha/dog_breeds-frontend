@@ -42,13 +42,22 @@ function App() {
       .then((initialCards) => {
         setCards(initialCards);
         setIsLoading(false);
+      })
+      .catch((err) => {
+        alert(
+          'Sorry, something went wrong with the request. There may be a connection issue or the server may be down. Please try again later.'
+        );
       });
-    api.getBreeds().then((allBreeds) => {
-      setBreeds(allBreeds);
-    });
-    api.getBreedImage(2).then((xxx) => {
-      console.log(xxx.url);
-    });
+    api
+      .getBreeds()
+      .then((allBreeds) => {
+        setBreeds(allBreeds);
+      })
+      .catch((err) => {
+        alert(
+          'Sorry, something went wrong with the request. There may be a connection issue or the server may be down. Please try again later.'
+        );
+      });
   }, []);
 
   // console.log(cards);
