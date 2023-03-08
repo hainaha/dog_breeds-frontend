@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './card.css';
+import './Card.css';
 import ImagePopup from '../ImagePopup/ImagePopup';
 
 function Card(props) {

@@ -1,5 +1,5 @@
 import logo from '../../images/paw-black-shape.svg';
-import './header.css';
+import './Header.css';
 
 function Header() {
   return (

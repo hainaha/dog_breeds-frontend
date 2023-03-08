@@ -1,5 +1,5 @@
 import image from '../../images/friends-3042751-min.jpg';
-import './home.css';
+import './Home.css';
 
 function Home(props) {
   return (

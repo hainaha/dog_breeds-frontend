@@ -1,4 +1,4 @@
-import './about.css';
+import './About.css';
 import authorImage from '../../images/haina-rego.jpg';
 import githubIcon from '../../images/github-icon.svg';
 

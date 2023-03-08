@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Card from '../Card/Card';
-import './main.css';
+import './Main.css';
 import Preloader from '../Preloader/Preloader';
 
 function Main(props) {

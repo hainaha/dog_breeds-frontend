@@ -1,4 +1,4 @@
-import './imagePopup.css';
+import './ImagePopup.css';
 
 function ImagePopup(props) {
   return (
