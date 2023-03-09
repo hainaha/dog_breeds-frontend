@@ -29,8 +29,8 @@
 
 .home__button:hover,
 .home__button:focus {
-  border: 2px solid #c5b391;
   background-color: #c5b391;
+  transform: scale(1.02, 1.02);
   color: #000000;
   cursor: pointer;
 }

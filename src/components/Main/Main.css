@@ -20,6 +20,13 @@
   padding: 10px;
   border-radius: 100px;
   margin-bottom: 15px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url(../../images/select-angle-down.png) no-repeat center right
+    #fff;
+  background-origin: content-box;
+  font-size: 15px;
 }
 
 .main__button {
@@ -36,8 +43,8 @@
 
 .main__button:hover,
 .main__button:focus {
-  border: 2px solid #c5b391;
   background-color: #c5b391;
+  transform: scale(1.02, 1.02);
   color: #000000;
   cursor: pointer;
 }
