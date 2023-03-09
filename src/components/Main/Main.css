@@ -29,6 +29,10 @@
   font-size: 15px;
 }
 
+.main__button-container {
+  flex-basis: 100%;
+}
+
 .main__button {
   background-color: #b49e72;
   border: none;

@@ -71,9 +71,11 @@ function Main(props) {
           {props.cardsToShow >= props.cards.length ? (
             ''
           ) : (
-            <button className='main__button' onClick={props.showMoreCards}>
-              Show More
-            </button>
+            <div className='main__button-container'>
+              <button className='main__button' onClick={props.showMoreCards}>
+                Show More
+              </button>
+            </div>
           )}
         </section>
       </main>
