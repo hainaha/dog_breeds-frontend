@@ -45,6 +45,9 @@ function Main() {
         alert(
           'Sorry, something went wrong with the request. There may be a connection issue or the server may be down. Please try again later.'
         );
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
     api
       .getBreeds()

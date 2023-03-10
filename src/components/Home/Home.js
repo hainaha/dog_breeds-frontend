@@ -1,7 +1,7 @@
 import image from '../../images/friends-3042751-min.jpg';
 import './Home.css';
 
-function Home(props) {
+function Home({ breedsPage }) {
   return (
     <>
       <div className='home__container'>
@@ -25,7 +25,7 @@ function Home(props) {
           loyal companion for life. Now click the button and take a look at some
           breeds.
         </p>
-        <button className='home__button' onClick={props.breedsPage}>
+        <button className='home__button' onClick={breedsPage}>
           Dog Breeds
         </button>
       </div>
