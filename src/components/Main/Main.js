@@ -1,9 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Card from '../Card/Card';
 import './Main.css';
 import Preloader from '../Preloader/Preloader';
+import api from '../../utils/TheDogApi';
 
-function Main(props) {
+function Main() {
+  const [cards, setCards] = useState([]);
+  const [breeds, setBreeds] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [cardsToShow, setCardsToShow] = useState(3);
+
   const [selectedBreed, setSelectedBreed] = useState('');
   const [selectedBreedName, setSelectedBreedName] = useState('');
   const [selectedBreedImage, setSelectedBreedImage] = useState('');
@@ -15,13 +21,42 @@ function Main(props) {
   }
 
   function showSelectedBreed() {
-    let breed = props.breeds.find(function (breed) {
+    let breed = breeds.find(function (breed) {
       return breed.name === selectedBreed;
     });
     setSelectedBreedName(breed.name);
     setSelectedBreedImage(breed.image.url);
     setSelectedBreedTemperament(breed.temperament);
   }
+
+  function handleShowMoreCards() {
+    setCardsToShow(cardsToShow + 3);
+  }
+
+  useEffect(() => {
+    api
+      .getInitialCards()
+      .then(setIsLoading(true))
+      .then((initialCards) => {
+        setCards(initialCards);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        alert(
+          'Sorry, something went wrong with the request. There may be a connection issue or the server may be down. Please try again later.'
+        );
+      });
+    api
+      .getBreeds()
+      .then((allBreeds) => {
+        setBreeds(allBreeds);
+      })
+      .catch((err) => {
+        alert(
+          'Sorry, something went wrong with the request. There may be a connection issue or the server may be down. Please try again later.'
+        );
+      });
+  }, []);
 
   return (
     <>
@@ -40,7 +75,7 @@ function Main(props) {
             <option value='0' key='select_breed'>
               Choose a breed
             </option>
-            {props.breeds.map((breed) => (
+            {breeds.map((breed) => (
               <option value={breed.name} key={breed.id}>
                 {breed.name}
               </option>
@@ -61,18 +96,18 @@ function Main(props) {
             randomly picked breeds.
           </p>
         </div>
-        {props.isLoading ? <Preloader /> : ''}
+        {isLoading ? <Preloader /> : ''}
         <section className='main__content'>
-          {props.cards.slice(0, props.cardsToShow).map((card) => (
+          {cards.slice(0, cardsToShow).map((card) => (
             <>
-              <Card card={card} key={card.id} onCardClick={props.onCardClick} />
+              <Card card={card} key={card.id} />
             </>
           ))}
-          {props.cardsToShow >= props.cards.length ? (
+          {cardsToShow >= cards.length ? (
             ''
           ) : (
             <div className='main__button-container'>
-              <button className='main__button' onClick={props.showMoreCards}>
+              <button className='main__button' onClick={handleShowMoreCards}>
                 Show More
               </button>
             </div>
