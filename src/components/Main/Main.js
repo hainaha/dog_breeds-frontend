@@ -9,11 +9,12 @@ function Main() {
   const [breeds, setBreeds] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [cardsToShow, setCardsToShow] = useState(3);
-
   const [selectedBreed, setSelectedBreed] = useState('');
-  const [selectedBreedName, setSelectedBreedName] = useState('');
-  const [selectedBreedImage, setSelectedBreedImage] = useState('');
-  const [selectedBreedTemperament, setSelectedBreedTemperament] = useState('');
+  const [selectedBreedInfo, setSelectedBreedInfo] = useState({
+    image: {},
+    name: '',
+    temperament: '',
+  });
 
   function handleSelectBreed(evt) {
     const selected = evt.target.value;
@@ -24,9 +25,7 @@ function Main() {
     let breed = breeds.find(function (breed) {
       return breed.name === selectedBreed;
     });
-    setSelectedBreedName(breed.name);
-    setSelectedBreedImage(breed.image.url);
-    setSelectedBreedTemperament(breed.temperament);
+    setSelectedBreedInfo(breed);
   }
 
   function handleShowMoreCards() {
@@ -88,12 +87,12 @@ function Main() {
             Search
           </button>
           <img
-            src={selectedBreedImage}
-            alt={selectedBreedName}
+            src={selectedBreedInfo.image.url}
+            alt={selectedBreedInfo.name}
             className='main__select-image'
           />
-          <p className='main__select-text'>{selectedBreedName}</p>
-          <p className='main__select-text'>{selectedBreedTemperament}</p>
+          <p className='main__select-text'>{selectedBreedInfo.name}</p>
+          <p className='main__select-text'>{selectedBreedInfo.temperament}</p>
           <p className='main__select-title'>
             Not sure about the breed? Look at the cards to know more about
             randomly picked breeds.
