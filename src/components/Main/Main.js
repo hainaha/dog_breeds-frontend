@@ -22,10 +22,13 @@ function Main() {
   }
 
   function showSelectedBreed() {
-    let breed = breeds.find(function (breed) {
-      return breed.name === selectedBreed;
-    });
-    setSelectedBreedInfo(breed);
+    if (selectedBreed) {
+      let breed = breeds.find(function (breed) {
+        return breed.name === selectedBreed;
+      });
+      setSelectedBreedInfo(breed);
+      console.log(selectedBreedInfo.image.url);
+    }
   }
 
   function handleShowMoreCards() {
