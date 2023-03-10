@@ -2,7 +2,6 @@
   width: 90%;
   max-width: 282px;
   border-radius: 10px;
-  position: relative;
 }
 
 .card__image {
@@ -37,6 +36,4 @@
 .card__text {
   font-size: 14px;
   text-align: left;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }

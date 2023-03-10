@@ -14,26 +14,24 @@ function Card({ card }) {
   }
 
   return (
-    <>
-      <div className='card'>
-        <img
-          src={card.url}
-          className='card__image'
-          alt={card.breeds[0].name}
-          onClick={handleCardClick}
+    <article className='card'>
+      <img
+        src={card.url}
+        className='card__image'
+        alt={card.breeds[0].name}
+        onClick={handleCardClick}
+      />
+      <div className='card__title-container'>
+        <h2 className='card__title'>{card.breeds[0].name}</h2>
+        <p className='card__text'>{card.breeds[0].temperament}</p>
+        <ImagePopup
+          isOpen={isImagePopupOpen}
+          imgSrc={card.url}
+          imgName={card.breeds[0].name}
+          onClose={closeImagePopup}
         />
-        <div className='card__title-container'>
-          <h2 className='card__title'>{card.breeds[0].name}</h2>
-          <p className='card__text'>{card.breeds[0].temperament}</p>
-          <ImagePopup
-            isOpen={isImagePopupOpen}
-            imgSrc={card.url}
-            imgName={card.breeds[0].name}
-            onClose={closeImagePopup}
-          />
-        </div>
       </div>
-    </>
+    </article>
   );
 }
 
