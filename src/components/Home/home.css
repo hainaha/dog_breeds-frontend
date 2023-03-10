@@ -1,0 +1,55 @@
+.home__image {
+  max-width: 100%;
+  margin-top: 18px;
+}
+
+.home__container {
+  max-width: 880px;
+  margin: 0 auto;
+}
+.home__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  margin: 1em;
+  text-align: center;
+}
+
+.home__button {
+  background-color: #b49e72;
+  border: none;
+  color: #ffffff;
+  border-radius: 100px;
+  padding: 1em 3em;
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.home__button:hover,
+.home__button:focus {
+  background-color: #c5b391;
+  transform: scale(1.02, 1.02);
+  color: #000000;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+  .home__text {
+    font-size: 18px;
+    line-height: 1.21;
+    text-align: justify;
+  }
+
+  .home__button {
+    font-size: 18px;
+    margin-top: 36px;
+  }
+}
+
+@media screen and (min-width: 880px) {
+  .home__image {
+    max-width: 880px;
+  }
+}
