@@ -20,7 +20,10 @@ function App() {
         <Header />
         <Navigation />
         <Routes>
-          <Route path='/' element={<Home breedsPage={breedsPage} />} />
+          <Route
+            path='/dog_breeds-frontend'
+            element={<Home breedsPage={breedsPage} />}
+          />
           <Route path='/breeds' element={<Main />} />
           <Route path='/about' element={<About />} />
         </Routes>
