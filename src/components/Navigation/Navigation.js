@@ -4,7 +4,7 @@ import './Navigation.css';
 export default function Navigation() {
   return (
     <nav className='navigation'>
-      <NavLink to='/' className='navigation__link'>
+      <NavLink to='/dog_breeds-frontend' className='navigation__link'>
         Home
       </NavLink>
       <NavLink to='about' className='navigation__link'>
