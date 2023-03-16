@@ -27,7 +27,6 @@ function Main() {
         return breed.name === selectedBreed;
       });
       setSelectedBreedInfo(breed);
-      console.log(selectedBreedInfo.image.url);
     }
   }
 
