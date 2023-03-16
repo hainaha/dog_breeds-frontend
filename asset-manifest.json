@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/dog_breeds-frontend/static/css/main.9c0d1162.css",
+    "main.js": "/dog_breeds-frontend/static/js/main.0da97d50.js",
+    "static/js/787.254aa3e9.chunk.js": "/dog_breeds-frontend/static/js/787.254aa3e9.chunk.js",
+    "static/media/friends-3042751-min.jpg": "/dog_breeds-frontend/static/media/friends-3042751-min.29f7877ff42198096f1d.jpg",
+    "static/media/haina-rego.jpg": "/dog_breeds-frontend/static/media/haina-rego.91b8b733463bd770e8c5.jpg",
+    "static/media/Inter-MediumItalic.woff?v=3.19": "/dog_breeds-frontend/static/media/Inter-MediumItalic.3d0107dd43d0101274d3.woff",
+    "static/media/Inter-BlackItalic.woff?v=3.19": "/dog_breeds-frontend/static/media/Inter-BlackItalic.ca1e738e4f349f27514d.woff",
+    "static/media/Inter-Italic.woff?v=3.19": "/dog_breeds-frontend/static/media/Inter-Italic.890025e726861dba417f.woff",
+    "static/media/Inter-Medium.woff?v=3.19": "/dog_breeds-frontend/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
+    "static/media/Inter-Black.woff?v=3.19": "/dog_breeds-frontend/static/media/Inter-Black.c6938660eec019fefd68.woff",
+    "static/media/Inter-Regular.woff?v=3.19": "/dog_breeds-frontend/static/media/Inter-Regular.8c206db99195777c6769.woff",
+    "static/media/Inter-MediumItalic.woff2?v=3.19": "/dog_breeds-frontend/static/media/Inter-MediumItalic.085cb93e613ba3d40d2b.woff2",
+    "static/media/Inter-BlackItalic.woff2?v=3.19": "/dog_breeds-frontend/static/media/Inter-BlackItalic.cb2a7335650c690077fe.woff2",
+    "static/media/Inter-Italic.woff2?v=3.19": "/dog_breeds-frontend/static/media/Inter-Italic.cb10ffd7684cd9836a05.woff2",
+    "static/media/Inter-Medium.woff2?v=3.19": "/dog_breeds-frontend/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
+    "static/media/Inter-Black.woff2?v=3.19": "/dog_breeds-frontend/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
+    "static/media/Inter-Regular.woff2?v=3.19": "/dog_breeds-frontend/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
+    "static/media/github-icon.svg": "/dog_breeds-frontend/static/media/github-icon.7e1409154186efa62fdcb320443eaa07.svg",
+    "static/media/paw-black-shape.svg": "/dog_breeds-frontend/static/media/paw-black-shape.236104a19872cb241313326bfc134611.svg",
+    "index.html": "/dog_breeds-frontend/index.html",
+    "main.9c0d1162.css.map": "/dog_breeds-frontend/static/css/main.9c0d1162.css.map",
+    "main.0da97d50.js.map": "/dog_breeds-frontend/static/js/main.0da97d50.js.map",
+    "787.254aa3e9.chunk.js.map": "/dog_breeds-frontend/static/js/787.254aa3e9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9c0d1162.css",
+    "static/js/main.0da97d50.js"
+  ]
+}
