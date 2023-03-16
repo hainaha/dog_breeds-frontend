@@ -12,14 +12,14 @@ The Dog Breeds project was implemented as the final project for Practicum Web De
 
 **Learn More**
 
-[Create React App](https://github.com/facebook/create-react-app)
-[React](https://reactjs.org/)
-[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[BEM methodology](https://en.bem.info/methodology/)
-[Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-[The Dog API](https://thedogapi.com/)
-[Practicum Web Developer course](https://practicum.com/pt-bra/web/)
+- [Create React App](https://github.com/facebook/create-react-app)
+- [React](https://reactjs.org/)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [BEM methodology](https://en.bem.info/methodology/)
+- [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [The Dog API](https://thedogapi.com/)
+- [Practicum Web Developer course](https://practicum.com/pt-bra/web/)
 
-<!-- **Deploy on GitHub Pages**
+**Deploy on GitHub Pages**
 
-[Link to the project deployed on GitHub Pages](https://hainaha.github.io/dog_breeds-frontend/) -->
+[Link to the project deployed on GitHub Pages](https://hainaha.github.io/dog_breeds-frontend/)
